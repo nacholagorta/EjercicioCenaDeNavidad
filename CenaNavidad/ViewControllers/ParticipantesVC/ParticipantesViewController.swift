@@ -23,6 +23,10 @@ class ParticipantesViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func filterButtonPressed() {
+        let secondViewController = FilterPay(task:participantes)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
     
     @objc internal func addPressed()
     {
@@ -32,6 +36,12 @@ class ParticipantesViewController: UIViewController {
         addView.modalPresentationStyle = .overCurrentContext
         present(addView,animated: true,completion: nil)
     }
+    
+    @objc private func filterPayments(){
+        let filterPayVC = FilterPay(task: participantes)
+        navigationController?.pushViewController(filterPayVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

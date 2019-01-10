@@ -59,9 +59,8 @@ class AddViewController: UIViewController {
     }
     @IBAction func saveButtonPressed()
     {
-       
         if(repository.get(name: textField.text!) != nil) || (textField.text?.elementsEqual(""))!{
-            print("No repitas")
+            print("Introduce un nombre válido")
         }
         else{
             self.task.name = textField.text
