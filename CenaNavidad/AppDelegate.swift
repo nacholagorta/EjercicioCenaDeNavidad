@@ -17,10 +17,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        if let window = window{
-            let mainvc = ParticipantesViewController()
-            let navigarionViewController = UINavigationController(rootViewController: mainvc)
-            window.rootViewController = navigarionViewController
+        if let window = window {
+            
+            let participantesVC = ParticipantesViewController()
+            let DinnerVC = DinnerViewController()
+            let GroupVC = GroupViewController()
+            
+            let tabController = UITabBarController()
+            
+            UITabBar.appearance().barTintColor = UIColor.white
+            UITabBar.appearance().tintColor = UIColor(red: 1, green: 0.5, blue: 0, alpha: 1)
+            UINavigationBar.appearance().barTintColor = UIColor.white
+            
+            
+            let worldclockNavigationController = UINavigationController(rootViewController: participantesVC)
+            let alarmNavigationController = UINavigationController(rootViewController: GroupVC)
+            let bedtimeNavigationController = UINavigationController(rootViewController: DinnerVC)
+            
+            let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+            worldclockNavigationController.navigationBar.titleTextAttributes = textAttributes
+            alarmNavigationController.navigationBar.titleTextAttributes = textAttributes
+            bedtimeNavigationController.navigationBar.titleTextAttributes = textAttributes
+            
+            
+            tabController.viewControllers = [worldclockNavigationController,alarmNavigationController,bedtimeNavigationController]
+            window.rootViewController = tabController
             window.makeKeyAndVisible()
         }
         return true

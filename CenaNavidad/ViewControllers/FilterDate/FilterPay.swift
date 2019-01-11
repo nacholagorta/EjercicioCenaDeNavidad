@@ -1,8 +1,8 @@
 //
-//  FilterPay.swift
+//  DateViewController.swift
 //  CenaNavidad
 //
-//  Created by IGNACIO OLAGORTA VERA on 10/1/19.
+//  Created by SEBASTIÁN TANGARIFE ACERO on 11/1/19.
 //  Copyright © 2019 SEBASTIÁN TANGARIFE ACERO. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import UIKit
 class FilterPay: UIViewController {
     @IBOutlet weak var tablaFiltered: UITableView!
     internal var participantes: [Participantes] = []
- internal var participantesMorososArray: [Participantes] = []
-
+    internal var participantesMorososArray: [Participantes] = []
+    
     convenience init(task: [Participantes])
     {
         self.init()
@@ -32,7 +32,7 @@ class FilterPay: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      registerCells()
+        registerCells()
         let participantesMorosos = participantes.filter{
             (participantes) -> Bool in return participantes.isDone == true
         }
@@ -42,23 +42,22 @@ class FilterPay: UIViewController {
         print(participantesMorosos)
         print(participantes)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension FilterPay: UITableViewDelegate,UITableViewDataSource
     
@@ -87,7 +86,7 @@ extension FilterPay: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if participantesMorososArray.count == 0{
             let cell: EmptyTableViewCell = (tablaFiltered.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as? EmptyTableViewCell)!
-           // cell.delegate = self as! EmptyTableViewCellDelegate
+            // cell.delegate = self as! EmptyTableViewCellDelegate
             return cell
             
         }

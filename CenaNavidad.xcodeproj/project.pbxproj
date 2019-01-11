@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B8F08957B1B581C621E1A7FD /* Pods_CenaNavidad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AB91E541C1B9C0843F94E2 /* Pods_CenaNavidad.framework */; };
-		DD85A0F621E7BE45005DD2E1 /* FilterPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A0F421E7BE45005DD2E1 /* FilterPay.swift */; };
-		DD85A0F721E7BE45005DD2E1 /* FilterPay.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD85A0F521E7BE45005DD2E1 /* FilterPay.xib */; };
+		DD39F37121E8BB8600171D84 /* FilterPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD39F36F21E8BB8600171D84 /* FilterPay.swift */; };
+		DD39F37221E8BB8600171D84 /* FilterPay.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD39F37021E8BB8600171D84 /* FilterPay.xib */; };
+		DD39F37B21E8E2B200171D84 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD39F37921E8E2B200171D84 /* GroupViewController.swift */; };
+		DD39F37C21E8E2B200171D84 /* GroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD39F37A21E8E2B200171D84 /* GroupViewController.xib */; };
+		DD39F38021E8E2D100171D84 /* DinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD39F37E21E8E2D100171D84 /* DinnerViewController.swift */; };
+		DD39F38121E8E2D100171D84 /* DinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD39F37F21E8E2D100171D84 /* DinnerViewController.xib */; };
 		DD85A0FA21E7BF1A005DD2E1 /* FilteredPayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A0F821E7BF1A005DD2E1 /* FilteredPayCell.swift */; };
 		DD85A0FB21E7BF1A005DD2E1 /* FilteredPayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD85A0F921E7BF1A005DD2E1 /* FilteredPayCell.xib */; };
 		DD85A0FE21E7BFBF005DD2E1 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A0FC21E7BFBF005DD2E1 /* EmptyTableViewCell.swift */; };
@@ -33,8 +37,12 @@
 		16342E4F5350A8FB5764E363 /* Pods-CenaNavidad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.debug.xcconfig"; sourceTree = "<group>"; };
 		79AB91E541C1B9C0843F94E2 /* Pods_CenaNavidad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B273E608E1D016EF145AB597 /* Pods-CenaNavidad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.release.xcconfig"; sourceTree = "<group>"; };
-		DD85A0F421E7BE45005DD2E1 /* FilterPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPay.swift; sourceTree = "<group>"; };
-		DD85A0F521E7BE45005DD2E1 /* FilterPay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPay.xib; sourceTree = "<group>"; };
+		DD39F36F21E8BB8600171D84 /* FilterPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPay.swift; sourceTree = "<group>"; };
+		DD39F37021E8BB8600171D84 /* FilterPay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPay.xib; sourceTree = "<group>"; };
+		DD39F37921E8E2B200171D84 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		DD39F37A21E8E2B200171D84 /* GroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupViewController.xib; sourceTree = "<group>"; };
+		DD39F37E21E8E2D100171D84 /* DinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerViewController.swift; sourceTree = "<group>"; };
+		DD39F37F21E8E2D100171D84 /* DinnerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerViewController.xib; sourceTree = "<group>"; };
 		DD85A0F821E7BF1A005DD2E1 /* FilteredPayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPayCell.swift; sourceTree = "<group>"; };
 		DD85A0F921E7BF1A005DD2E1 /* FilteredPayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredPayCell.xib; sourceTree = "<group>"; };
 		DD85A0FC21E7BFBF005DD2E1 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,13 +93,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD85A0F321E7BE25005DD2E1 /* FilterPayVC */ = {
+		DD39F36E21E8BB1200171D84 /* FilterPayVC */ = {
 			isa = PBXGroup;
 			children = (
-				DD85A0F421E7BE45005DD2E1 /* FilterPay.swift */,
-				DD85A0F521E7BE45005DD2E1 /* FilterPay.xib */,
+				DD39F36F21E8BB8600171D84 /* FilterPay.swift */,
+				DD39F37021E8BB8600171D84 /* FilterPay.xib */,
 			);
-			path = FilterPayVC;
+			name = FilterPayVC;
+			path = FilterDate;
+			sourceTree = "<group>";
+		};
+		DD39F37721E8E26F00171D84 /* GroupVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD39F37921E8E2B200171D84 /* GroupViewController.swift */,
+				DD39F37A21E8E2B200171D84 /* GroupViewController.xib */,
+			);
+			path = GroupVC;
+			sourceTree = "<group>";
+		};
+		DD39F37821E8E28D00171D84 /* DinnerVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD39F37E21E8E2D100171D84 /* DinnerViewController.swift */,
+				DD39F37F21E8E2D100171D84 /* DinnerViewController.xib */,
+			);
+			path = DinnerVC;
 			sourceTree = "<group>";
 		};
 		DDD4863E21E644FF002C4657 = {
@@ -131,7 +158,9 @@
 		DDD4865C21E64524002C4657 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD85A0F321E7BE25005DD2E1 /* FilterPayVC */,
+				DD39F37821E8E28D00171D84 /* DinnerVC */,
+				DD39F37721E8E26F00171D84 /* GroupVC */,
+				DD39F36E21E8BB1200171D84 /* FilterPayVC */,
 				DDD4867221E65B4C002C4657 /* AddVC */,
 				DDD4867121E65B37002C4657 /* ParticipantesVC */,
 			);
@@ -254,13 +283,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD85A0F721E7BE45005DD2E1 /* FilterPay.xib in Resources */,
 				DD85A0FF21E7BFBF005DD2E1 /* EmptyTableViewCell.xib in Resources */,
 				DDD4867621E65B77002C4657 /* AddViewController.xib in Resources */,
 				DD85A0FB21E7BF1A005DD2E1 /* FilteredPayCell.xib in Resources */,
+				DD39F37C21E8E2B200171D84 /* GroupViewController.xib in Resources */,
 				DDD4866521E64B54002C4657 /* PeopleTableViewCell.xib in Resources */,
+				DD39F37221E8BB8600171D84 /* FilterPay.xib in Resources */,
 				DDD4865521E64501002C4657 /* LaunchScreen.storyboard in Resources */,
 				DDD4865221E64501002C4657 /* Assets.xcassets in Resources */,
+				DD39F38121E8E2D100171D84 /* DinnerViewController.xib in Resources */,
 				DDD4866021E64A08002C4657 /* ParticipantesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,12 +344,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD39F37B21E8E2B200171D84 /* GroupViewController.swift in Sources */,
 				DDD4865F21E64A08002C4657 /* ParticipantesViewController.swift in Sources */,
 				DDD4866821E64ED9002C4657 /* Participantes.swift in Sources */,
+				DD39F38021E8E2D100171D84 /* DinnerViewController.swift in Sources */,
 				DDD4867021E657A6002C4657 /* Entity.swift in Sources */,
 				DD85A0FA21E7BF1A005DD2E1 /* FilteredPayCell.swift in Sources */,
+				DD39F37121E8BB8600171D84 /* FilterPay.swift in Sources */,
 				DDD4866D21E655C7002C4657 /* LocalPeopleRepository.swift in Sources */,
-				DD85A0F621E7BE45005DD2E1 /* FilterPay.swift in Sources */,
 				DDD4866B21E655AE002C4657 /* Repository.swift in Sources */,
 				DDD4867521E65B77002C4657 /* AddViewController.swift in Sources */,
 				DDD4864B21E644FF002C4657 /* AppDelegate.swift in Sources */,

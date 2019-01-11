@@ -13,7 +13,7 @@ class LocalPeopleRepository: NSObject {
     func getAll() -> [Participantes] {
         var tasks : [Participantes] = []
         do {
-            let entities = try Realm().objects(Entity.self).sorted(byKeyPath: "name", ascending: true)
+            let entities = try Realm().objects(Entity.self).sorted(byKeyPath: "date", ascending: false)
             for entity in entities {
                 let model = entity.taskModel()
                 tasks.append(model)

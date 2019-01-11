@@ -28,6 +28,7 @@ class AddViewController: UIViewController {
             self.task = Participantes()
             self.task.id = UUID().uuidString
             self.task.name = ""
+           // self.task.date = Date()
         }
         else
         {
@@ -64,9 +65,23 @@ class AddViewController: UIViewController {
         }
         else{
             self.task.name = textField.text
+            let today = Date()
+            self.task.date = today.toString(dateFormat: "dd/MM/yyyy hh:mm:ss")
             delegate.addViewController(_vc: self, didEditTask: task)
         }
 
+    }
+    
+}
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .full
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
     
 }

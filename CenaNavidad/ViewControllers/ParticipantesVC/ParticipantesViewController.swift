@@ -13,13 +13,19 @@ class ParticipantesViewController: UIViewController {
     @IBOutlet weak var PeopleTable: UITableView!
     internal var repository = LocalPeopleRepository()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         participantes = repository.getAll()
         title = "COMENSALES"
+        self.tabBarItem.image = #imageLiteral(resourceName: "dish")
+        
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
+        
         navigationItem.setRightBarButton(addBarButtonItem, animated: true)
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.orange
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.orange
         
         // Do any additional setup after loading the view.
     }
@@ -28,10 +34,11 @@ class ParticipantesViewController: UIViewController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
+    
     @objc internal func addPressed()
     {
         let addView = AddViewController(task: nil)
-         addView.delegate = self as! AddViewControllerDelegate
+        addView.delegate = self as! AddViewControllerDelegate
         addView.modalTransitionStyle = .coverVertical
         addView.modalPresentationStyle = .overCurrentContext
         present(addView,animated: true,completion: nil)
@@ -102,7 +109,15 @@ extension ParticipantesViewController: UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+         if editingStyle == .insert{
+            let addView = AddViewController(task: participantes[indexPath.row])
+            addView.delegate = self as! AddViewControllerDelegate
+            addView.modalTransitionStyle = .coverVertical
+            addView.modalPresentationStyle = .overCurrentContext
+            present(addView,animated: true,completion: nil)
+        }
+
+       else if editingStyle == .delete {
             let task = participantes[indexPath.row]
             if repository.delete (a: task)
             {
