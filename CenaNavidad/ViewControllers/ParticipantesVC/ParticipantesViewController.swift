@@ -1,10 +1,3 @@
-//
-//  ParticipantesViewController.swift
-//  CenaNavidad
-//
-//  Created by SEBASTIÁN TANGARIFE ACERO on 9/1/19.
-//  Copyright © 2019 SEBASTIÁN TANGARIFE ACERO. All rights reserved.
-//
 
 import UIKit
 
@@ -18,6 +11,10 @@ class ParticipantesViewController: UIViewController {
         registerCell()
         participantes = repository.getAll()
         title = "COMENSALES"
+        
+        let addLeftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(modifyCell))
+        navigationItem.setLeftBarButton(addLeftBarButtonItem, animated: true)
+        
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
         navigationItem.setRightBarButton(addBarButtonItem, animated: true)
         
@@ -35,6 +32,12 @@ class ParticipantesViewController: UIViewController {
         addView.modalTransitionStyle = .coverVertical
         addView.modalPresentationStyle = .overCurrentContext
         present(addView,animated: true,completion: nil)
+    }
+    
+    @objc internal func modifyCell()
+    {
+        let secondViewController = ModifyViewController(task:participantes)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     @objc private func filterPayments(){

@@ -1,10 +1,3 @@
-//
-//  EmptyTableViewCell.swift
-//  CenaNavidad
-//
-//  Created by IGNACIO OLAGORTA VERA on 10/1/19.
-//  Copyright © 2019 SEBASTIÁN TANGARIFE ACERO. All rights reserved.
-//
 
 import UIKit
 

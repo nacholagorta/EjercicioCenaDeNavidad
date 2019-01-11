@@ -1,10 +1,4 @@
-//
-//  PeopleTableViewCell.swift
-//  CenaNavidad
-//
-//  Created by SEBASTIÁN TANGARIFE ACERO on 9/1/19.
-//  Copyright © 2019 SEBASTIÁN TANGARIFE ACERO. All rights reserved.
-//
+
 
 import UIKit
 

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B8F08957B1B581C621E1A7FD /* Pods_CenaNavidad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AB91E541C1B9C0843F94E2 /* Pods_CenaNavidad.framework */; };
+		DD75210F21E8B32A0088D178 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75210D21E8B32A0088D178 /* ModifyViewController.swift */; };
+		DD75211021E8B32A0088D178 /* ModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD75210E21E8B32A0088D178 /* ModifyViewController.xib */; };
+		DD75211C21E8DC150088D178 /* mdfAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD75211A21E8DC150088D178 /* mdfAlertViewController.swift */; };
+		DD75211D21E8DC150088D178 /* mdfAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD75211B21E8DC150088D178 /* mdfAlertViewController.xib */; };
 		DD85A0F621E7BE45005DD2E1 /* FilterPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A0F421E7BE45005DD2E1 /* FilterPay.swift */; };
 		DD85A0F721E7BE45005DD2E1 /* FilterPay.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD85A0F521E7BE45005DD2E1 /* FilterPay.xib */; };
 		DD85A0FA21E7BF1A005DD2E1 /* FilteredPayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85A0F821E7BF1A005DD2E1 /* FilteredPayCell.swift */; };
@@ -33,6 +37,10 @@
 		16342E4F5350A8FB5764E363 /* Pods-CenaNavidad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.debug.xcconfig"; sourceTree = "<group>"; };
 		79AB91E541C1B9C0843F94E2 /* Pods_CenaNavidad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenaNavidad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B273E608E1D016EF145AB597 /* Pods-CenaNavidad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenaNavidad.release.xcconfig"; path = "Pods/Target Support Files/Pods-CenaNavidad/Pods-CenaNavidad.release.xcconfig"; sourceTree = "<group>"; };
+		DD75210D21E8B32A0088D178 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		DD75210E21E8B32A0088D178 /* ModifyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyViewController.xib; sourceTree = "<group>"; };
+		DD75211A21E8DC150088D178 /* mdfAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdfAlertViewController.swift; sourceTree = "<group>"; };
+		DD75211B21E8DC150088D178 /* mdfAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mdfAlertViewController.xib; sourceTree = "<group>"; };
 		DD85A0F421E7BE45005DD2E1 /* FilterPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPay.swift; sourceTree = "<group>"; };
 		DD85A0F521E7BE45005DD2E1 /* FilterPay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPay.xib; sourceTree = "<group>"; };
 		DD85A0F821E7BF1A005DD2E1 /* FilteredPayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPayCell.swift; sourceTree = "<group>"; };
@@ -85,6 +93,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD75210121E8B2300088D178 /* ModifyVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD75210D21E8B32A0088D178 /* ModifyViewController.swift */,
+				DD75210E21E8B32A0088D178 /* ModifyViewController.xib */,
+			);
+			path = ModifyVC;
+			sourceTree = "<group>";
+		};
 		DD85A0F321E7BE25005DD2E1 /* FilterPayVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +148,7 @@
 		DDD4865C21E64524002C4657 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD75210121E8B2300088D178 /* ModifyVC */,
 				DD85A0F321E7BE25005DD2E1 /* FilterPayVC */,
 				DDD4867221E65B4C002C4657 /* AddVC */,
 				DDD4867121E65B37002C4657 /* ParticipantesVC */,
@@ -190,6 +208,8 @@
 			children = (
 				DDD4867321E65B77002C4657 /* AddViewController.swift */,
 				DDD4867421E65B77002C4657 /* AddViewController.xib */,
+				DD75211A21E8DC150088D178 /* mdfAlertViewController.swift */,
+				DD75211B21E8DC150088D178 /* mdfAlertViewController.xib */,
 			);
 			path = AddVC;
 			sourceTree = "<group>";
@@ -257,9 +277,11 @@
 				DD85A0F721E7BE45005DD2E1 /* FilterPay.xib in Resources */,
 				DD85A0FF21E7BFBF005DD2E1 /* EmptyTableViewCell.xib in Resources */,
 				DDD4867621E65B77002C4657 /* AddViewController.xib in Resources */,
+				DD75211D21E8DC150088D178 /* mdfAlertViewController.xib in Resources */,
 				DD85A0FB21E7BF1A005DD2E1 /* FilteredPayCell.xib in Resources */,
 				DDD4866521E64B54002C4657 /* PeopleTableViewCell.xib in Resources */,
 				DDD4865521E64501002C4657 /* LaunchScreen.storyboard in Resources */,
+				DD75211021E8B32A0088D178 /* ModifyViewController.xib in Resources */,
 				DDD4865221E64501002C4657 /* Assets.xcassets in Resources */,
 				DDD4866021E64A08002C4657 /* ParticipantesViewController.xib in Resources */,
 			);
@@ -317,6 +339,7 @@
 				DDD4866821E64ED9002C4657 /* Participantes.swift in Sources */,
 				DDD4867021E657A6002C4657 /* Entity.swift in Sources */,
 				DD85A0FA21E7BF1A005DD2E1 /* FilteredPayCell.swift in Sources */,
+				DD75210F21E8B32A0088D178 /* ModifyViewController.swift in Sources */,
 				DDD4866D21E655C7002C4657 /* LocalPeopleRepository.swift in Sources */,
 				DD85A0F621E7BE45005DD2E1 /* FilterPay.swift in Sources */,
 				DDD4866B21E655AE002C4657 /* Repository.swift in Sources */,
@@ -324,6 +347,7 @@
 				DDD4864B21E644FF002C4657 /* AppDelegate.swift in Sources */,
 				DDD4866421E64B54002C4657 /* PeopleTableViewCell.swift in Sources */,
 				DD85A0FE21E7BFBF005DD2E1 /* EmptyTableViewCell.swift in Sources */,
+				DD75211C21E8DC150088D178 /* mdfAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,4 @@
-//
-//  LocalPeopleRepository.swift
-//  CenaNavidad
-//
-//  Created by SEBASTIÁN TANGARIFE ACERO on 9/1/19.
-//  Copyright © 2019 SEBASTIÁN TANGARIFE ACERO. All rights reserved.
-//
+
 import UIKit
 import RealmSwift
 
@@ -66,7 +60,6 @@ class LocalPeopleRepository: NSObject {
         return true
     }
     func update(a: Participantes) -> Bool {
-        
         return create(a: a)
     }
     
